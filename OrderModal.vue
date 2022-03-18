@@ -127,7 +127,7 @@
           >
             取消
           </button>
-          <button type="button" class="btn btn-primary" @click="updatePaidData">
+          <button type="button" class="btn btn-primary" @click="updatePaidData()">
             修改付款狀態
           </button>
         </div>
@@ -155,7 +155,6 @@ export default {
   methods: {
     // 修改訂單資料
     updatePaidData (order = this.tempOrderObj) {
-      console.log(order)
       this.$http
         .put(
           `${process.env.VUE_APP_API}/v2/api/${process.env.VUE_APP_PATH}/admin/order/${order.id}`,
