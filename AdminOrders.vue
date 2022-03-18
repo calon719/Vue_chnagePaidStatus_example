@@ -144,8 +144,6 @@ export default {
         this.tempOrderData = { ...tempOrderObj }
         this.DeleteOrderModal.show()
       }
-    },
-    changePaid (data) {
     }
   },
   mounted () {
